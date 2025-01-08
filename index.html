@@ -158,6 +158,28 @@
         <a href="#comprar" class="cta-button">Comece agora, sem riscos</a>
     </section>
 
+    <section id="oferta-exclusiva">
+        <h2 style="color: #FFD700;">Oferta Exclusiva</h2>
+        <p>
+            Eu entendo que tomar decisões pode ser difícil, mas quero tornar isso o mais fácil possível para você. 
+            Pensando nisso, estou oferecendo uma condição especial para você que está aqui agora. 
+            Não perca a chance de transformar sua rotina por um preço imbatível!
+        </p>
+        <ul>
+            <li>Domine sua gestão do tempo com técnicas práticas e fáceis de aplicar.</li>
+            <li>Tenha mais tempo para você e para quem você ama.</li>
+            <li>Elimine o estresse de não conseguir cumprir suas tarefas diárias.</li>
+            <li>Organize seu dia de forma eficiente e produtiva.</li>
+        </ul>
+        <p style="font-size: 1.2rem; color: #ffffff;">De <span style="text-decoration: line-through;">R$109,90</span> por apenas <strong style="color: #FFD700;">R$79,90</strong>!</p>
+        <p>
+            Mas atenção: essa oferta especial está disponível apenas por <strong>tempo limitado</strong>! 
+            Aproveite agora mesmo antes que o preço volte ao normal.
+        </p>
+        <div id="temporizador" style="font-size: 1.5rem; font-weight: bold; color: #FFD700; margin: 1rem 0;"></div>
+        <a href="#comprar" class="cta-button">Aproveitar a Oferta Agora</a>
+    </section>
+
     <section id="faq">
         <h2>Perguntas Frequentes</h2>
         <div class="faq">
@@ -179,9 +201,35 @@
     </section>
 
     <footer>
-        <p>&copy; 2025 Eduardo Spinelli. Todos os direitos reservados.</p>
-        <p><a href="https://www.instagram.com/eduardospinellii/">Siga no Instagram</a></p>
+        <p>&copy; 2025 Seu Tempo Vale +. Todos os direitos reservados. <a href="#politica-de-privacidade">Política de Privacidade</a></p>
     </footer>
+
+    <script>
+        // Temporizador regressivo de 2 horas
+        function iniciarTemporizador(duracao, display) {
+            let timer = duracao, horas, minutos, segundos;
+            setInterval(function () {
+                horas = parseInt(timer / 3600, 10);
+                minutos = parseInt((timer % 3600) / 60, 10);
+                segundos = parseInt(timer % 60, 10);
+
+                horas = horas < 10 ? "0" + horas : horas;
+                minutos = minutos < 10 ? "0" + minutos : minutos;
+                segundos = segundos < 10 ? "0" + segundos : segundos;
+
+                display.textContent = `${horas}:${minutos}:${segundos}`;
+
+                if (--timer < 0) {
+                    display.textContent = "Tempo esgotado! Oferta encerrada.";
+                }
+            }, 1000);
+        }
+
+        window.onload = function () {
+            const duasHoras = 2 * 60 * 60; // 2 horas em segundos
+            const display = document.querySelector('#temporizador');
+            iniciarTemporizador(duasHoras, display);
+        };
+    </script>
 </body>
 </html>
-
