@@ -9,62 +9,81 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f9f9f9;
-            color: #333;
+            background-color: #000000;
+            color: #ffffff;
         }
         header {
-            background-color: #4CAF50;
-            color: white;
+            background-color: #000000;
+            color: #ffffff;
             text-align: center;
-            padding: 1.5rem 1rem;
+            padding: 2rem 1rem;
         }
         header h1 {
-            font-size: 1.8rem;
+            font-size: 2rem;
             margin: 0;
         }
         header p {
-            font-size: 1rem;
-            margin: 0.5rem 0 0;
+            font-size: 1.2rem;
+            margin: 0.5rem 0 1.5rem;
         }
         .cta-button {
-            display: block;
+            display: inline-block;
             margin: 1rem auto;
             padding: 0.8rem 1.5rem;
-            background-color: #ff9800;
-            color: white;
+            background-color: #FFD700;
+            color: #000000;
             text-align: center;
             font-size: 1.2rem;
             border: none;
             border-radius: 5px;
             text-decoration: none;
-            width: 80%;
+            cursor: pointer;
         }
         .cta-button:hover {
-            background-color: #e68900;
+            background-color: #FFC107;
         }
         section {
-            padding: 1.5rem 1rem;
+            padding: 2rem 1rem;
             text-align: center;
         }
         section h2 {
-            color: #4CAF50;
-            font-size: 1.5rem;
+            color: #FFD700;
+            font-size: 1.8rem;
             margin-bottom: 1rem;
         }
         section p {
-            font-size: 1rem;
+            font-size: 1.1rem;
             line-height: 1.6;
+            margin: 0 auto;
+            max-width: 600px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 1rem auto;
+            max-width: 600px;
+            text-align: left;
+        }
+        ul li {
+            background-color: #111111;
+            border: 1px solid #FFD700;
+            border-radius: 5px;
+            padding: 0.8rem;
+            margin: 0.5rem 0;
         }
         footer {
-            background-color: #333;
-            color: white;
+            background-color: #111111;
+            color: #ffffff;
             text-align: center;
             padding: 1rem 0;
             font-size: 0.9rem;
         }
         footer a {
-            color: #4CAF50;
+            color: #FFD700;
             text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -82,7 +101,7 @@
 
     <section id="beneficios">
         <h2>O que você vai aprender:</h2>
-        <ul style="text-align: left; max-width: 90%; margin: auto;">
+        <ul>
             <li>Definir metas claras e alcançáveis.</li>
             <li>Organizar sua rotina de forma inteligente.</li>
             <li>Evitar distrações e focar no que importa.</li>
