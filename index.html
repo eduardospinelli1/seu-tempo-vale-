@@ -1,184 +1,187 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seu Tempo Vale Mais</title>
+    <title>Seu Tempo Vale +</title>
     <style>
         body {
-            background-color: #000;
-            color: #fff;
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            background-color: #000000;
+            color: #ffffff;
         }
-
-        .container {
-            padding: 20px;
-        }
-
-        h1, h2, h3 {
-            color: #ffd700;
+        header {
+            background-color: #000000;
+            color: #ffffff;
             text-align: center;
+            padding: 2rem 1rem;
         }
-
-        .benefits {
-            background-color: #1a1a1a;
-            border: 2px solid #ffd700;
-            border-radius: 10px;
-            padding: 20px;
-            margin: 20px 0;
+        header h1 {
+            font-size: 2rem;
+            margin: 0;
         }
-
-        .benefits ul {
-            list-style: none;
-            padding: 0;
+        header p {
+            font-size: 1.2rem;
+            margin: 0.5rem 0 1.5rem;
         }
-
-        .benefits li {
-            margin: 10px 0;
-            display: flex;
-            align-items: center;
-        }
-
-        .benefits li::before {
-            content: '\2713';
-            color: #ffd700;
-            font-weight: bold;
-            margin-right: 10px;
-        }
-
-        .offer {
-            background-color: #1a1a1a;
-            border: 2px solid #ffd700;
-            border-radius: 10px;
-            padding: 20px;
+        .cta-button {
+            display: inline-block;
+            margin: 1rem auto;
+            padding: 0.8rem 1.5rem;
+            background-color: #FFD700;
+            color: #000000;
             text-align: center;
-            margin: 20px 0;
-        }
-
-        .offer .price {
-            font-size: 1.5em;
-            font-weight: bold;
-            margin: 10px 0;
-        }
-
-        .offer .discount {
-            text-decoration: line-through;
-            color: #aaa;
-        }
-
-        .offer .final-price {
-            color: #ffd700;
-        }
-
-        .offer button {
-            background-color: #ffd700;
-            color: #000;
+            font-size: 1.2rem;
             border: none;
             border-radius: 5px;
-            padding: 15px 30px;
-            font-size: 1em;
+            text-decoration: none;
             cursor: pointer;
         }
-
-        .offer button:hover {
-            background-color: #e6be00;
+        .cta-button:hover {
+            background-color: #FFC107;
         }
-
-        .timer {
-            font-size: 1.2em;
-            color: #ffd700;
-            margin-top: 10px;
-        }
-
-        .faq {
-            margin-top: 20px;
-            background-color: #1a1a1a;
-            padding: 20px;
-            border: 2px solid #ffd700;
-            border-radius: 10px;
-        }
-
-        .faq h3 {
+        section {
+            padding: 2rem 1rem;
             text-align: center;
-            margin-bottom: 10px;
         }
-
-        .faq .question {
-            font-weight: bold;
-            margin-top: 10px;
+        section h2 {
+            color: #FFD700;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
         }
-
-        .faq .answer {
-            margin-bottom: 10px;
+        section p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin: 0 auto;
+            max-width: 600px;
         }
-
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 1rem auto;
+            max-width: 600px;
+            text-align: left;
+        }
+        ul li {
+            background-color: #111111;
+            border: 1px solid #FFD700;
+            border-radius: 5px;
+            padding: 0.8rem;
+            margin: 0.5rem 0;
+        }
+        .testimonial {
+            background-color: #111111;
+            border: 1px solid #FFD700;
+            border-radius: 5px;
+            padding: 1rem;
+            margin: 1rem auto;
+            max-width: 600px;
+            text-align: left;
+        }
+        .faq {
+            background-color: #111111;
+            border: 1px solid #FFD700;
+            border-radius: 5px;
+            padding: 1.5rem;
+            margin: 1.5rem auto;
+            max-width: 600px;
+            text-align: left;
+        }
+        .faq h3 {
+            color: #FFD700;
+            margin-bottom: 1rem;
+        }
+        footer {
+            background-color: #111111;
+            color: #ffffff;
+            text-align: center;
+            padding: 1rem 0;
+            font-size: 0.9rem;
+        }
+        footer a {
+            color: #FFD700;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
     </style>
-    <script>
-        function startTimer(duration, display) {
-            let timer = duration, minutes, seconds;
-            setInterval(function () {
-                minutes = parseInt(timer / 60, 10);
-                seconds = parseInt(timer % 60, 10);
-
-                minutes = minutes < 10 ? "0" + minutes : minutes;
-                seconds = seconds < 10 ? "0" + seconds : seconds;
-
-                display.textContent = minutes + ":" + seconds;
-
-                if (--timer < 0) {
-                    timer = 0;
-                }
-            }, 1000);
-        }
-
-        window.onload = function () {
-            let oneHour = 60 * 60;
-            let display = document.querySelector('.timer');
-            startTimer(oneHour, display);
-        };
-    </script>
 </head>
 <body>
+    <header>
+        <h1>Seu Tempo Vale +</h1>
+        <p>Transforme sua rotina com quem já esteve no seu lugar.</p>
+        <a href="#comprar" class="cta-button">Adquira já seu eBook</a>
+    </header>
 
-<div class="container">
-    <h1>Seu Tempo Vale Mais</h1>
-    <p>Transforme sua gestão do tempo com um método prático e eficaz. Garanta mais tempo para o que realmente importa!</p>
+    <section id="introducao">
+        <h2>Eu sei exatamente como você se sente...</h2>
+        <p>
+            Durante muito tempo, eu também sentia que o dia nunca era suficiente. Era uma luta constante entre tarefas que se acumulavam, compromissos que eu nunca conseguia cumprir e aquela sensação frustrante de que estava deixando o que era mais importante para trás — minha família, meus sonhos, minha qualidade de vida.
+        </p>
+        <p>
+            Até que decidi que algo precisava mudar. Foi aí que mergulhei fundo em estratégias simples, mas transformadoras, que compartilho com você neste eBook. Se eu consegui, você também pode.
+        </p>
+    </section>
 
-    <div class="benefits">
-        <h2>Benefícios do eBook</h2>
+    <section id="solucao">
+        <h2>Como "Seu Tempo Vale +" pode ajudar você?</h2>
         <ul>
-            <li>Organize suas tarefas de forma simples e eficiente.</li>
-            <li>Descubra como priorizar o que realmente importa.</li>
-            <li>Aprenda a criar mais tempo para você e sua família.</li>
-            <li>Implemente técnicas que aumentam sua produtividade.</li>
-            <li>Viva com mais tranquilidade e equilíbrio.</li>
+            <li>Aprenda a identificar o que realmente importa na sua rotina e elimine o excesso.</li>
+            <li>Descubra como evitar distrações e focar no que traz resultados reais.</li>
+            <li>Organize suas tarefas de forma prática e eficiente, sem complicação.</li>
+            <li>Garanta mais tempo para o que você ama: sua família, seus hobbies e você mesmo.</li>
         </ul>
-    </div>
+        <a href="#comprar" class="cta-button">Quero transformar minha vida</a>
+    </section>
 
-    <div class="offer">
-        <h2>Oferta Exclusiva</h2>
-        <p class="price">De <span class="discount">R$ 109,90</span> por apenas <span class="final-price">R$ 79,90</span></p>
-        <p class="timer">Oferta expira em: 60:00</p>
-        <button>Quero garantir minha oferta agora!</button>
-    </div>
+    <section id="depoimentos">
+        <h2>Veja o que outros já conquistaram:</h2>
+        <div class="testimonial">
+            <p><strong>João A.:</strong> "Sempre achei que nunca teria tempo para nada. Depois do eBook, minha rotina mudou completamente. Agora consigo estar presente no trabalho e em casa."</p>
+        </div>
+        <div class="testimonial">
+            <p><strong>Maria S.:</strong> "As dicas são práticas e realmente funcionam! Hoje me sinto muito mais organizada e finalmente tenho tempo para mim."</p>
+        </div>
+        <div class="testimonial">
+            <p><strong>Lucas P.:</strong> "Antes, eu vivia apagando incêndios. Agora, consigo planejar meu dia e fazer o que realmente importa. Recomendo demais!"</p>
+        </div>
+    </section>
 
-    <div class="faq">
-        <h3>Perguntas Frequentes</h3>
-        <div class="question">1. Como aplicar as dicas do eBook?</div>
-        <div class="answer">Todas as dicas são explicadas de forma prática e fácil de implementar, independente da sua rotina atual.</div>
+    <section id="garantia">
+        <h2>Você não tem nada a perder</h2>
+        <p>
+            Confio tanto no impacto que este eBook pode ter na sua vida que ofereço uma garantia incondicional de 7 dias. Leia, aplique e veja os resultados. Se não for o que você esperava, devolvo seu dinheiro sem nenhuma pergunta.
+        </p>
+        <a href="#comprar" class="cta-button">Comece agora, sem riscos</a>
+    </section>
 
-        <div class="question">2. Quanto tempo leva para ver resultados?</div>
-        <div class="answer">Você pode começar a notar melhorias na sua produtividade já na primeira semana de aplicação.</div>
+    <section id="faq">
+        <h2>Perguntas Frequentes</h2>
+        <div class="faq">
+            <h3>1. Como aplicar as dicas do eBook no meu dia a dia?</h3>
+            <p>O eBook é repleto de estratégias práticas e simples que você pode começar a implementar imediatamente. Cada capítulo traz exemplos e orientações detalhadas para facilitar sua aplicação.</p>
+        </div>
+        <div class="faq">
+            <h3>2. Quanto tempo leva para ver resultados?</h3>
+            <p>Os resultados variam de pessoa para pessoa, mas muitos leitores relatam mudanças positivas em poucos dias ao aplicarem as técnicas sugeridas consistentemente.</p>
+        </div>
+        <div class="faq">
+            <h3>3. O que acontece se eu não gostar do eBook?</h3>
+            <p>Sem problemas! Você tem 7 dias para pedir seu reembolso total. Basta entrar em contato, e devolveremos o valor sem questionamentos.</p>
+        </div>
+        <div class="faq">
+            <h3>4. O eBook é adequado para qualquer pessoa?</h3>
+            <p>Sim! As dicas e estratégias foram desenvolvidas para serem úteis tanto para profissionais, quanto para quem busca organizar melhor sua rotina pessoal.</p>
+        </div>
+    </section>
 
-        <div class="question">3. O que inclui a garantia?</div>
-        <div class="answer">Você terá 7 dias para avaliar o eBook e, caso não fique satisfeito, pode solicitar o reembolso total.</div>
-
-        <div class="question">4. O eBook é adequado para qualquer perfil?</div>
-        <div class="answer">Sim, o eBook foi desenvolvido para ser útil tanto para iniciantes quanto para pessoas mais experientes em gestão do tempo.</div>
-    </div>
-</div>
-
+    <footer>
+        <p>&copy; 2025 Eduardo Spinelli. Todos os direitos reservados.</p>
+        <p><a href="https://www.instagram.com/eduardospinellii/">Siga no Instagram</a></p>
+    </footer>
 </body>
 </html>
+
