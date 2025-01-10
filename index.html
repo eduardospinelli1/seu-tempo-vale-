@@ -108,48 +108,12 @@
             text-decoration: underline;
         }
     </style>
-    <script>
-        // Scroll suave para as seções
-        function scrollToSection(event, sectionId) {
-            event.preventDefault();
-            document.querySelector(sectionId).scrollIntoView({
-                behavior: "smooth",
-                block: "start"
-            });
-        }
-
-        // Temporizador regressivo de 2 horas
-        function iniciarTemporizador(duracao, display) {
-            let timer = duracao, horas, minutos, segundos;
-            setInterval(function () {
-                horas = parseInt(timer / 3600, 10);
-                minutos = parseInt((timer % 3600) / 60, 10);
-                segundos = parseInt(timer % 60, 10);
-
-                horas = horas < 10 ? "0" + horas : horas;
-                minutos = minutos < 10 ? "0" + minutos : minutos;
-                segundos = segundos < 10 ? "0" + segundos : segundos;
-
-                display.textContent = `${horas}:${minutos}:${segundos}`;
-
-                if (--timer < 0) {
-                    display.textContent = "Tempo esgotado! Oferta encerrada.";
-                }
-            }, 1000);
-        }
-
-        window.onload = function () {
-            const duasHoras = 2 * 60 * 60; // 2 horas em segundos
-            const display = document.querySelector('#temporizador');
-            iniciarTemporizador(duasHoras, display);
-        };
-    </script>
 </head>
 <body>
     <header>
         <h1>Seu Tempo Vale +</h1>
         <p>Transforme sua rotina com quem já esteve no seu lugar.</p>
-        <a href="#oferta-exclusiva" class="cta-button" onclick="scrollToSection(event, '#oferta-exclusiva')">Mude agora sua rotina</a>
+        <a href="#oferta-exclusiva" class="cta-button">Mude agora sua rotina</a>
     </header>
 
     <section id="introducao">
@@ -162,7 +126,7 @@
         </p>
     </section>
 
-    <!-- Imagem -->
+    <!-- Imagem adicionada aqui -->
     <section id="imagem-inspiracao" style="text-align: center; margin: 2rem 0;">
         <img src="https://github.com/eduardospinelli1/seu-tempo-vale-/blob/main/assets/capa%20ebook%20para%20pagina%20de%20vendas%20(2).png?raw=true" alt="Imagem ilustrativa sobre gestão de tempo" style="max-width: 100%; height: auto; border-radius: 10px; border: 2px solid #FFD700;">
     </section>
@@ -175,17 +139,87 @@
             <li>Organize suas tarefas de forma prática e eficiente, sem complicações.</li>
             <li>Garanta mais tempo para o que você ama: Sua família, seus hobbies e o principal: cuidar de si mesmo.</li>
         </ul>
-        <a href="#oferta-exclusiva" class="cta-button" onclick="scrollToSection(event, '#oferta-exclusiva')">Quero transformar minha rotina</a>
+        <a href="#oferta-exclusiva" class="cta-button">Quero transformar minha rotina</a>
+    </section>
+
+    <section id="depoimentos">
+        <h2>Veja o que outros já conquistaram:</h2>
+        <div class="testimonial">
+            <p><strong>João A.:</strong> "Sempre achei que nunca teria tempo para nada. Depois do eBook, minha rotina mudou completamente. Agora consigo estar presente no trabalho e em casa."</p>
+        </div>
+        <div class="testimonial">
+            <p><strong>Maria S.:</strong> "As dicas são práticas e realmente funcionam! Hoje me sinto muito mais organizada e finalmente tenho tempo para mim."</p>
+        </div>
+        <div class="testimonial">
+            <p><strong>Lucas P.:</strong> "Antes, eu vivia apagando incêndios. Agora, consigo planejar meu dia e fazer o que realmente importa. Recomendo demais!"</p>
+        </div>
+    </section>
+
+    <section id="garantia">
+        <h2>Você não tem nada a perder</h2>
+        <p>
+            Confio tanto no impacto que este conteúdo pode ter na sua vida que ofereço uma garantia incondicional de 7 dias. Leia, aplique e veja os resultados. Se não for o que você esperava, devolvo seu investimento sem nenhuma complicação.
+        </p>
     </section>
 
     <section id="oferta-exclusiva">
         <h2 style="color: #FFD700;">Oferta Exclusiva</h2>
-        <p>...</p>
+        <p>
+            Eu entendo que tomar decisões pode ser difícil, mas quero tornar isso o mais fácil possível para você. 
+            Pensando nisso, estou oferecendo uma condição especial para você aqui e agora. 
+            Não perca a chance de transformar sua rotina e ser ainda mais produtivo por um preço imbatível!
+        </p>
+        <ul>
+            <li>Domine sua gestão do tempo com técnicas práticas e fáceis de aplicar.</li>
+            <li>Tenha mais tempo para você e para quem você ama.</li>
+            <li>Elimine o estresse de não conseguir cumprir suas tarefas diárias.</li>
+            <li>Organize seu dia de forma eficiente e produtiva.</li>
+        </ul>
+        <p style="font-size: 1.2rem; color: #ffffff;">De <span style="text-decoration: line-through;">R$110,00</span> por apenas <strong style="color: #FFD700;">R$79,90</strong>!</p>
+        <p>
+            Mas atenção: essa oferta especial está disponível apenas por <strong>tempo limitado</strong>! 
+            Aproveite agora mesmo antes que o preço volte ao normal.
+        </p>
+        <div id="temporizador" style="font-size: 1.5rem; font-weight: bold; color: #FFD700; margin: 1rem 0;"></div>
         <a href="https://pay.kiwify.com.br/YmXoOOU?afid=llORFid5" class="cta-button">Adquira com desconto Agora!</a>
     </section>
 
+    <section id="faq">
+        <h2>Perguntas Frequentes</h2>
+        <div class="faq">
+            <h3>1. Como aplicar as dicas do livro no meu dia a dia?</h3>
+            <p>O livro é repleto de estratégias práticas e simples que você pode começar a implementar imediatamente. Cada capítulo traz exemplos e orientações detalhadas para facilitar sua aplicação.</p>
+        </div>
+        <div class="faq">
+            <h3>2. Eu nunca consigo organizar minha rotina. Este livro vai me ajudar?</h3>
+            <p>Sim! Este eBook foi criado exatamente para quem tem dificuldade em organizar suas tarefas diárias. Com as técnicas ensinadas, você conseguirá transformar sua rotina de forma eficiente e prática.</p>
+        </div>
+        <div class="faq">
+            <h3>3. E se eu não gostar do material?</h3>
+            <p>Você tem 7 dias para experimentar e avaliar o eBook. Caso não goste, devolvo 100% do seu dinheiro, sem perguntas ou complicações.</p>
+        </div>
+    </section>
+
     <footer>
-        <p>&copy; 2025 Seu Tempo Vale +. Todos os direitos reservados.</p>
+        <p>© 2023 Seu Tempo Vale +. Todos os direitos reservados.</p>
+        <p><a href="#topo">Voltar ao topo</a></p>
     </footer>
+
+    <script>
+        // Função para rolagem suave até a seção "Oferta Exclusiva"
+        document.querySelectorAll('.cta-button').forEach(button => {
+            button.addEventListener('click', function(e) {
+                const target = this.getAttribute('href');
+                if (target.startsWith('#')) {
+                    e.preventDefault();
+                    const section = document.querySelector(target);
+                    if (section) {
+                        section.scrollIntoView({ behavior: 'smooth' });
+                    }
+                }
+            });
+        });
+    </script>
 </body>
 </html>
+
