@@ -11,7 +11,6 @@
             padding: 0;
             background-color: #000000;
             color: #ffffff;
-            scroll-behavior: smooth;
         }
         header {
             background-color: #000000;
@@ -114,7 +113,7 @@
     <header>
         <h1>Seu Tempo Vale +</h1>
         <p>Transforme sua rotina com quem já esteve no seu lugar.</p>
-        <a href="#oferta-exclusiva" class="cta-button">Mude agora sua rotina</a>
+        <a href="#comprar" class="cta-button">Mude agora sua rotina</a>
     </header>
 
     <section id="introducao">
@@ -127,9 +126,10 @@
         </p>
     </section>
 
-    <section id="imagem-inspiracao" style="text-align: center; margin: 2rem 0;">
-        <img src="https://github.com/eduardospinelli1/seu-tempo-vale-/blob/main/assets/capa%20ebook%20para%20pagina%20de%20vendas%20(2).png?raw=true" alt="Imagem ilustrativa sobre gestão de tempo" style="max-width: 100%; height: auto; border-radius: 10px; border: 2px solid #FFD700;">
-    </section>
+    <!-- Imagem adicionada aqui -->
+<section id="imagem-inspiracao" style="text-align: center; margin: 2rem 0;">
+    <img src="https://github.com/eduardospinelli1/seu-tempo-vale-/blob/main/assets/capa%20ebook%20para%20pagina%20de%20vendas%20(2).png?raw=true" alt="Imagem ilustrativa sobre gestão de tempo" style="max-width: 100%; height: auto; border-radius: 10px; border: 2px solid #FFD700;">
+</section>
 
     <section id="solucao">
         <h2>Como "Seu Tempo Vale +" pode ajudar você?</h2>
@@ -139,7 +139,7 @@
             <li>Organize suas tarefas de forma prática e eficiente, sem complicações.</li>
             <li>Garanta mais tempo para o que você ama: Sua família, seus hobbies e o principal: cuidar de si mesmo.</li>
         </ul>
-        <a href="#oferta-exclusiva" class="cta-button">Quero transformar minha rotina</a>
+        <a href="#comprar" class="cta-button">Quero transformar minha rotina</a>
     </section>
 
     <section id="depoimentos">
@@ -181,7 +181,7 @@
             Aproveite agora mesmo antes que o preço volte ao normal.
         </p>
         <div id="temporizador" style="font-size: 1.5rem; font-weight: bold; color: #FFD700; margin: 1rem 0;"></div>
-        <a href="https://pagamento.exemplo.com" class="cta-button">Adquira com desconto Agora!</a>
+        <a href="#comprar" class="cta-button">Aproveitar com desconto Agora!</a>
     </section>
 
     <section id="faq">
@@ -192,18 +192,53 @@
         </div>
         <div class="faq">
             <h3>2. Quanto tempo leva para ver resultados?</h3>
-            <p>Os resultados variam de pessoa para pessoa, mas muitos leitores relatam mudanças positivas em poucos dias, ao aplicar as técnicas apresentadas no livro.</p>
+            <p>Os resultados variam de pessoa para pessoa, mas muitos leitores relatam mudanças positivas em poucos dias ao aplicarem as técnicas sugeridas consistentemente.</p>
         </div>
         <div class="faq">
-            <h3>3. O conteúdo é indicado para qual público?</h3>
-            <p>O livro é ideal para qualquer pessoa que busca melhorar sua gestão do tempo, sejam profissionais, estudantes ou até mesmo pais e mães em busca de equilíbrio.</p>
+            <h3>3. O que acontece se eu não gostar do livro?</h3>
+            <p>Sem problemas! Você tem 7 dias para pedir seu reembolso total. Basta entrar em contato, e devolveremos o investimento sem sem complicações.</p>
+        </div>
+        <div class="faq">
+            <h3>4. O livro é adequado para qualquer pessoa?</h3>
+            <p>Sim! As dicas e estratégias foram desenvolvidas para serem úteis tanto para profissionais, quanto para quem busca organizar melhor sua vida pessoal. Podendo então ser aplicada por qualquer pessoa em qualquer condição.</p>
         </div>
     </section>
 
+    <!-- Botão de compra após dúvidas frequentes -->
+    <section id="comprar" style="text-align: center; padding: 2rem;">
+        <a href="https://pagamento.exemplo.com" class="cta-button">Compre Agora e Mude Sua Vida</a>
+    </section>
+
     <footer>
-        <p>© 2025 Seu Tempo Vale +. Todos os direitos reservados.</p>
-        <p>Para suporte ou dúvidas, entre em contato conosco <a href="mailto:suporte@seutempovale.com">aqui</a>.</p>
+        <p>&copy; 2025 Seu Tempo Vale +. Todos os direitos reservados. <a href="#politica-de-privacidade">Política de Privacidade</a></p>
     </footer>
+
+    <script>
+        // Temporizador regressivo de 2 horas
+        function iniciarTemporizador(duracao, display) {
+            let timer = duracao, horas, minutos, segundos;
+            setInterval(function () {
+                horas = parseInt(timer / 3600, 10);
+                minutos = parseInt((timer % 3600) / 60, 10);
+                segundos = parseInt(timer % 60, 10);
+
+                horas = horas < 10 ? "0" + horas : horas;
+                minutos = minutos < 10 ? "0" + minutos : minutos;
+                segundos = segundos < 10 ? "0" + segundos : segundos;
+
+                display.textContent = `${horas}:${minutos}:${segundos}`;
+
+                if (--timer < 0) {
+                    display.textContent = "Tempo esgotado! Oferta encerrada.";
+                }
+            }, 1000);
+        }
+
+        window.onload = function () {
+            const duasHoras = 2 * 60 * 60; // 2 horas em segundos
+            const display = document.querySelector('#temporizador');
+            iniciarTemporizador(duasHoras, display);
+        };
+    </script>
 </body>
 </html>
-
