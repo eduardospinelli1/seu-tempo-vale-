@@ -214,32 +214,32 @@
     </footer>
 
     <script>
-        // Temporizador regressivo de 2 horas
-        function iniciarTemporizador(duracao, display) {
-            let timer = duracao, horas, minutos, segundos;
-            setInterval(function () {
-                horas = parseInt(timer / 3600, 10);
-                minutos = parseInt((timer % 3600) / 60, 10);
-                segundos = parseInt(timer % 60, 10);
+    // Temporizador regressivo de 2 horas
+    function iniciarTemporizador(duracao, display) {
+        let timer = duracao, horas, minutos, segundos;
+        setInterval(function () {
+            horas = parseInt(timer / 3600, 10);
+            minutos = parseInt((timer % 3600) / 60, 10);
+            segundos = parseInt(timer % 60, 10);
 
-                horas = horas < 10 ? "0" + horas : horas;
-                minutos = minutos < 10 ? "0" + minutos : minutos;
-                segundos = segundos < 10 ? "0" + segundos : segundos;
+            horas = horas < 10 ? "0" + horas : horas;
+            minutos = minutos < 10 ? "0" + minutos : minutos;
+            segundos = segundos < 10 ? "0" + segundos : segundos;
 
-                display.textContent = `${horas}:${minutos}:${segundos}`;
+            display.textContent = `${horas}:${minutos}:${segundos}`;
 
-                if (--timer < 0) {
-                    display.textContent = "Tempo esgotado! Oferta encerrada.";
-                }
-            }, 1000);
-        }
+            if (--timer < 0) {
+                display.textContent = "Tempo esgotado! Oferta encerrada.";
+            }
+        }, 1000);
+    }
 
-        window.onload = function () {
-            const duasHoras = 2 * 60 * 60; // 2 horas em segundos
-            const display = document.querySelector('#temporizador');
-            iniciarTemporizador(duasHoras, display);
-        };
-   <script>
+    window.onload = function () {
+        const duasHoras = 2 * 60 * 60; // 2 horas em segundos
+        const display = document.querySelector('#temporizador');
+        iniciarTemporizador(duasHoras, display);
+    };
+
     // Rolagem suave
     document.querySelectorAll('a.scroll').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
@@ -252,6 +252,7 @@
         });
     });
 </script>
+
 
 </body>
 </html>
