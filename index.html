@@ -72,18 +72,18 @@
             margin: 0.5rem 0;
         }
         .testimonial {
-            background-color: #111111;
-        border: 1px solid #FFD700;
-        border-radius: 5px;
-        padding: 0.5rem; /* Reduz o espaçamento interno */
-        margin: 1rem auto;
-        max-width: 300px; /* Reduz a largura máxima do quadro */
-        text-align: center; /* Centraliza o conteúdo */
-    }
-    .testimonial img {
-        width: 100%; /* Ajusta para ocupar toda a largura do quadro */
-        max-width: 150px; /* Limita o tamanho máximo da imagem */
-        border-radius: 5px;
+    background-color: #111111;
+    border: 1px solid #FFD700;
+    border-radius: 5px;
+    padding: 0.5rem; /* Mantém um leve espaçamento interno */
+    margin: 1rem auto;
+    display: inline-block; /* Ajusta o tamanho do quadro ao conteúdo (imagem) */
+    text-align: center; /* Centraliza o conteúdo */
+}
+.testimonial img {
+    max-width: 150px; /* Tamanho máximo da imagem */
+    width: 100%; /* Ajusta ao quadro, caso menor */
+    border-radius: 5px; /* Bordas arredondadas */
         }
         .faq {
             background-color: #111111;
